@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+/*
+  Telehealth With AI — master design system.
+
+  Visual direction:
+    - Clinical white canvas, navy text.
+    - Green is the BRAND colour (logo, primary commands, positive state).
+    - Blue is the ACTION colour (in-context buttons: join, open, save, apply).
+    - Amber warns, red is reserved for destructive and error only.
+    - Thin borders, compact typography, maximum 8px corner radius.
+    - Identity is represented by initials. No photography or illustrated people.
+*/
+
+@theme {
+  /* --- Brand green: logo, primary command buttons, positive status --- */
+  --color-brand-50: #ecfdf3;
+  --color-brand-100: #d1fadf;
+  --color-brand-200: #a6f4c5;
+  --color-brand-500: #12854a;
+  --color-brand-600: #0b6b3a;
+  --color-brand-700: #08542e;
+  --color-brand-800: #063f22;
+
+  /* --- Action blue: contextual commands inside a working surface --- */
+  --color-action-50: #eff6ff;
+  --color-action-100: #dbeafe;
+  --color-action-500: #2f6fed;
+  --color-action-600: #1d5bd6;
+  --color-action-700: #1748ac;
+
+  /* --- Navy ink: headings and body copy on the white canvas --- */
+  --color-ink-900: #0f2744;
+  --color-ink-800: #1c3555;
+  --color-ink-700: #33455f;
+  --color-ink-500: #64748b;
+  --color-ink-400: #94a3b8;
+
+  /* --- Warning amber: "review due", "approaching threshold" --- */
+  --color-warn-50: #fffbeb;
+  --color-warn-100: #fef3c7;
+  --color-warn-600: #d97706;
+  --color-warn-700: #b45309;
+
+  /* --- Danger red: destructive actions, failures, high severity --- */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+
+  /* --- Surfaces and hairlines --- */
+  --color-canvas: #ffffff;
+  --color-surface: #f8fafc;
+  --color-hairline: #e6eaf0;
+
+  /* Dark shell used only by the live consultation room. */
+  --color-stage-900: #1b2432;
+  --color-stage-800: #263041;
+  --color-stage-700: #313d51;
+
+  /* The design caps radius at 8px. Nothing rounder than `rounded-lg`. */
+  --radius-lg: 8px;
+  --radius-md: 6px;
+  --radius-sm: 4px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-canvas);
+  color: var(--color-ink-900);
+  font-family:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility: a visible keyboard focus ring everywhere, never removed. */
+:focus-visible {
+  outline: 2px solid var(--color-action-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Tabular figures keep dense operational tables aligned column to column. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin scrollbars so side panels do not steal horizontal space. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
