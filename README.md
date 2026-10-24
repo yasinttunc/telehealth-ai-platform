@@ -1,5 +1,7 @@
 # Telehealth AI Platform
 
+[![CI](https://github.com/yasinttunc/telehealth-ai-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/yasinttunc/telehealth-ai-platform/actions/workflows/ci.yml)
+
 A full-stack telehealth application that brings appointment management, secure
 video consultations, live transcription, structured symptom extraction,
 clinician review, and explainable clinic alerts into one workflow.
@@ -350,6 +352,13 @@ cd ai-service
 
 The live suite can call paid external services. Review its output and local
 configuration before enabling it.
+
+### Continuous integration
+
+Every push and pull request runs three GitHub Actions jobs: the Spring Boot test
+suite against PostgreSQL started from `docker-compose.yml` (schema and seed data
+from `infra/postgres/init`), the AI service unit tests, and the frontend lint and
+production build.
 
 ## Design Decisions
 
