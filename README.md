@@ -286,14 +286,29 @@ only. Do not reuse them in a deployed system.
 | `DEEPGRAM_SAMPLE_RATE` | PCM sample rate |
 | `DEEPGRAM_ENCODING` | Audio encoding |
 
-## API Overview
+## API Documentation
 
-All `/api` routes except login require a JWT. Spring Security and service-level
-ownership checks enforce role access.
+The Spring Boot backend publishes its browser-facing REST contract as an OpenAPI 3 specification. Swagger UI is generated from the running application, so its request models, response schemas, validation constraints, and endpoint groups remain aligned with the implementation.
+
+| Resource | Local address | Purpose |
+| --- | --- | --- |
+| Swagger UI | [http://localhost:8091/swagger-ui.html](http://localhost:8091/swagger-ui.html) | Explore and exercise the browser-facing REST API interactively. |
+| OpenAPI JSON | [http://localhost:8091/v3/api-docs](http://localhost:8091/v3/api-docs) | Consume the machine-readable OpenAPI specification. |
+| AI-service schema | [http://127.0.0.1:8001/docs](http://127.0.0.1:8001/docs) | Inspect the separate FastAPI extraction-service boundary when that service is running. |
+
+Start the Spring application before opening the first two links. These are local development endpoints, not a publicly hosted API.
+
+### Authenticating in Swagger UI
+
+Most application endpoints require a JWT. Call `POST /api/auth/login` with one of the local demonstration accounts, copy the returned token, select **Authorize** in Swagger UI, and paste the token into the `bearerAuth` security scheme. The login operation is intentionally public; protected operations then execute with the supplied token.
+
+### Browser-facing API surface
+
+Only `/api/**` routes appear in the Spring OpenAPI specification. Spring Security and service-level ownership checks enforce role access.
 
 | Area | Base route | Main operations |
 |---|---|---|
-| Authentication | `/api/auth` | Login |
+| Authentication | `/api/auth` | Login and JWT issuance |
 | Users | `/api/users` | User management and password reset |
 | Clinics | `/api/clinics` | Clinic management |
 | Doctors | `/api/doctors` | Clinician profiles and specialty lookup |
@@ -302,10 +317,9 @@ ownership checks enforce role access.
 | Video token | `/api/consultations/{id}/livekit-token` | Role-bound room token |
 | Extraction jobs | `/api/consultations/{id}/extraction-jobs` | Create and inspect jobs |
 | Finding review | `/api/symptom-records/{id}/review` | Read and save accepted findings |
-| Alerts | `/api/alerts` | List, evidence, history, status changes |
-| Worker API | `/internal/consultations` | Segments, heartbeat, lifecycle |
+| Alerts | `/api/alerts` | List, evidence, history, and status changes |
 
-Internal routes require `INTERNAL_SERVICE_KEY` and are not browser endpoints.
+Internal worker routes under `/internal/**` require `INTERNAL_SERVICE_KEY` and are intentionally excluded from the browser-facing OpenAPI contract.
 
 ## Testing
 
