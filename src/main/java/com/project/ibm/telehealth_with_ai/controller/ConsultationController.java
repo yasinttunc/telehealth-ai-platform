@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/consultations")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Consultations", description = "Consultation lifecycle and transcript workflow.")
 public class ConsultationController {
 
     private final ConsultationService consultationService;

@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/clinics")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Clinics", description = "Clinic directory and administration.")
 public class ClinicController {
 
     private final ClinicService clinicService;

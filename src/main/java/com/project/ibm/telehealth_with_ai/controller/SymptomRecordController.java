@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Symptom records", description = "Reviewed symptom-extraction records for consultations.")
 public class SymptomRecordController {
     private final SymptomRecordService symptomRecordService;
     public SymptomRecordController(SymptomRecordService symptomRecordService) {

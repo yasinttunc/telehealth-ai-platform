@@ -20,6 +20,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/doctors")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Doctors", description = "Doctor directory and administration.")
 public class DoctorController {
 
     private final DoctorService doctorService;

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Authentication", description = "Obtain a JWT for protected API operations.")
 public class AuthController {
 
     private final AuthService authService;
@@ -16,6 +17,10 @@ public class AuthController {
         this.authService = authService;
     }
     @PostMapping("/login")
+    @io.swagger.v3.oas.annotations.Operation(
+            summary = "Authenticate and obtain a JWT",
+            security = {}
+    )
     public ResponseEntity<AuthResponse> login(
             @Valid @RequestBody LoginRequest request
     ){

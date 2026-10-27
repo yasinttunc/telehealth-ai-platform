@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 /** Endpoints for the assigned Doctor to read and save a finding review. */
 @RestController
 @RequestMapping("/api/symptom-records/{symptomRecordId}/review")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Finding review", description = "Clinician review of AI-generated symptom findings.")
 @PreAuthorize("hasRole('DOCTOR')")
 public class FindingReviewController {
 

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 /** Clinic trend alert API for administrators and Doctors. */
 @RestController
 @RequestMapping("/api/alerts")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Alerts", description = "Review clinic-level trend alerts, evidence, and status history.")
 @PreAuthorize("hasAnyRole('ADMIN', 'DOCTOR')")
 public class AlertController {
 

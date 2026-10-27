@@ -49,6 +49,13 @@ class ApiSecurityIntegrationTest {
     }
 
     @Test
+    void apiDocumentationIsPublicButBusinessEndpointsRemainProtected() throws Exception {
+        mockMvc.perform(get("/v3/api-docs"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.info.title").value("AI-Integrated Telehealth Platform API"));
+    }
+
+    @Test
     void patientCannotAccessAdminOnlyUserRoute() throws Exception {
         String patientToken = bearerToken("patient.oliver.hughes", "password");
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/consultations")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Video rooms", description = "Short-lived LiveKit access tokens for consultation participants.")
 public class LiveKitController {
 
     private final LiveKitTokenService  liveKitTokenService;

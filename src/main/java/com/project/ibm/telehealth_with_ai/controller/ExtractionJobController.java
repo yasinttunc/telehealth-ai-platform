@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/consultations/{consultationId}/extraction-jobs")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Extraction jobs", description = "Clinician-initiated structured symptom extraction jobs.")
 public class ExtractionJobController {
 
     private final ExtractionJobService extractionJobService;
