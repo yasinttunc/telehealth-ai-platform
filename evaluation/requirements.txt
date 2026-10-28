@@ -1,0 +1,6 @@
+# HTTP client for the Anthropic and Ollama REST APIs.
+httpx==0.28.1
+# Official OpenAI SDK.
+openai==1.82.0
+# Test runner.
+pytest==8.3.5

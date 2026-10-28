@@ -1,0 +1,11 @@
+{
+  "duplicatePairs": 18,
+  "conceptPrecision": 0.9310344827586207,
+  "conceptRecall": 0.9080717488789237,
+  "conceptF1": 0.9194097616345063,
+  "sharedFindings": 405,
+  "assertionComparisons": 391,
+  "assertionAgreement": 0.9667519181585678,
+  "cohensKappa": 0.9217578696221042,
+  "note": "This is an inter-annotator reference, not a performance ceiling. Models are scored against the consolidated gold data."
+}

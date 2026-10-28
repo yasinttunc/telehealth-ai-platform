@@ -1,0 +1,363 @@
+{
+  "pairedComparisons": [
+    {
+      "dialogues": 213,
+      "difference": -0.022943139519958966,
+      "excludesZero": true,
+      "firstProvider": "openai",
+      "firstValue": 0.5727201257861635,
+      "high": -0.012981751259488528,
+      "low": -0.033249886351363944,
+      "metric": "conceptF1",
+      "secondProvider": "anthropic",
+      "secondValue": 0.5956632653061225
+    },
+    {
+      "dialogues": 213,
+      "difference": -0.032955659698803985,
+      "excludesZero": true,
+      "firstProvider": "openai",
+      "firstValue": 0.5430305442244553,
+      "high": -0.021957339673910226,
+      "low": -0.04452699893959855,
+      "metric": "assertionAwareF1",
+      "secondProvider": "anthropic",
+      "secondValue": 0.5759862039232593
+    },
+    {
+      "dialogues": 213,
+      "difference": -0.0011334655709832817,
+      "excludesZero": false,
+      "firstProvider": "openai",
+      "firstValue": 0.005950694247662227,
+      "high": 0.0002855511136493436,
+      "low": -0.002865329512893983,
+      "metric": "falsePresenceIncidence",
+      "secondProvider": "anthropic",
+      "secondValue": 0.007084159818645509
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.0,
+      "excludesZero": false,
+      "firstProvider": "openai",
+      "firstValue": 0.02127659574468085,
+      "high": 0.006216006216006216,
+      "low": -0.006139677666922486,
+      "metric": "falseNegationIncidence",
+      "secondProvider": "anthropic",
+      "secondValue": 0.02127659574468085
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.24945092202264713,
+      "excludesZero": true,
+      "firstProvider": "openai",
+      "firstValue": 0.5727201257861635,
+      "high": 0.2733917101599799,
+      "low": 0.226852655653687,
+      "metric": "conceptF1",
+      "secondProvider": "ollama",
+      "secondValue": 0.32326920376351637
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.2374035804998052,
+      "excludesZero": true,
+      "firstProvider": "openai",
+      "firstValue": 0.5430305442244553,
+      "high": 0.2624738522055821,
+      "low": 0.21451406832629466,
+      "metric": "assertionAwareF1",
+      "secondProvider": "ollama",
+      "secondValue": 0.3056269637246501
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.0,
+      "excludesZero": false,
+      "firstProvider": "openai",
+      "firstValue": 0.005950694247662227,
+      "high": 0.0023446658851113715,
+      "low": -0.0022883295194508005,
+      "metric": "falsePresenceIncidence",
+      "secondProvider": "ollama",
+      "secondValue": 0.005950694247662227
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.013677811550151974,
+      "excludesZero": true,
+      "firstProvider": "openai",
+      "firstValue": 0.02127659574468085,
+      "high": 0.0232,
+      "low": 0.0058953574060427415,
+      "metric": "falseNegationIncidence",
+      "secondProvider": "ollama",
+      "secondValue": 0.007598784194528876
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.2723940615426061,
+      "excludesZero": true,
+      "firstProvider": "anthropic",
+      "firstValue": 0.5956632653061225,
+      "high": 0.2975154140715947,
+      "low": 0.24817677912201547,
+      "metric": "conceptF1",
+      "secondProvider": "ollama",
+      "secondValue": 0.32326920376351637
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.2703592401986092,
+      "excludesZero": true,
+      "firstProvider": "anthropic",
+      "firstValue": 0.5759862039232593,
+      "high": 0.29419122398965375,
+      "low": 0.24724198163566424,
+      "metric": "assertionAwareF1",
+      "secondProvider": "ollama",
+      "secondValue": 0.3056269637246501
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.0011334655709832817,
+      "excludesZero": false,
+      "firstProvider": "anthropic",
+      "firstValue": 0.007084159818645509,
+      "high": 0.0033575825405707895,
+      "low": -0.0011267605633802818,
+      "metric": "falsePresenceIncidence",
+      "secondProvider": "ollama",
+      "secondValue": 0.005950694247662227
+    },
+    {
+      "dialogues": 213,
+      "difference": 0.013677811550151974,
+      "excludesZero": true,
+      "firstProvider": "anthropic",
+      "firstValue": 0.02127659574468085,
+      "high": 0.0248,
+      "low": 0.004629629629629629,
+      "metric": "falseNegationIncidence",
+      "secondProvider": "ollama",
+      "secondValue": 0.007598784194528876
+    }
+  ],
+  "promptVersion": "v2",
+  "providers": {
+    "anthropic": {
+      "assertionAwareF1": 0.5759862039232593,
+      "assertionAwarePrecision": 0.6115815976195926,
+      "assertionAwareRecall": 0.5443063760440008,
+      "conceptF1": 0.5956632653061225,
+      "conceptPrecision": 0.6363842834431069,
+      "conceptRecall": 0.5598401598401599,
+      "conditionalAssertionAccuracy": 0.9653179190751445,
+      "conditionalFalseNegationRate": 0.033816425120772944,
+      "conditionalFalsePresenceRate": 0.013116474291710388,
+      "confidenceIntervals": {
+        "assertionAwareF1": {
+          "high": 0.5909993381866314,
+          "low": 0.5612854196069916
+        },
+        "conceptF1": {
+          "high": 0.6102045032018178,
+          "low": 0.5819846678023849
+        },
+        "falseNegationIncidence": {
+          "high": 0.03286384976525822,
+          "low": 0.011737089201877934
+        },
+        "falsePresenceIncidence": {
+          "high": 0.010901591043017089,
+          "low": 0.004090537223888737
+        }
+      },
+      "confusion": {
+        "NEGATED->CONFLICT": 1,
+        "NEGATED->NEGATED": 1875,
+        "NEGATED->PRESENT": 24,
+        "NEGATED->UNCERTAIN": 6,
+        "PRESENT->NEGATED": 28,
+        "PRESENT->PRESENT": 779,
+        "PRESENT->UNCERTAIN": 21,
+        "UNCERTAIN->NEGATED": 7,
+        "UNCERTAIN->PRESENT": 9,
+        "UNCERTAIN->UNCERTAIN": 18
+      },
+      "dialogues": 213,
+      "exactEvidenceRate": 0.44509981851179675,
+      "falseNegationIncidence": 0.02127659574468085,
+      "falsePresenceIncidence": 0.007084159818645509,
+      "missingEvidenceRate": 0.0,
+      "negatedConceptRecall": 0.5400963445735336,
+      "normalisedEvidenceRate": 0.45099818511796735,
+      "operational": {
+        "calls": 213,
+        "costUsd": 1.616983,
+        "failureRate": 0.0,
+        "inputTokens": 640288,
+        "latencyMedianMs": 6592.9,
+        "latencyP95Ms": 9924.6,
+        "outputTokens": 195339,
+        "pricingConfigured": true,
+        "validationFailureRate": 0.0
+      },
+      "predictionConflicts": 1,
+      "presentConceptRecall": 0.6291793313069909,
+      "repeatability": {
+        "assertionAgreement": 1.0,
+        "assertionComparisons": 629,
+        "criticalAssertionChanges": 0,
+        "criticalChangeExamples": [],
+        "dialoguesCompared": 30,
+        "meanConceptJaccard": 0.920737718977239
+      }
+    },
+    "ollama": {
+      "assertionAwareF1": 0.3056269637246501,
+      "assertionAwarePrecision": 0.5112279025322504,
+      "assertionAwareRecall": 0.21796699938887756,
+      "conceptF1": 0.32326920376351637,
+      "conceptPrecision": 0.5439508506616257,
+      "conceptRecall": 0.22997002997002997,
+      "conditionalAssertionAccuracy": 0.9485815602836879,
+      "conditionalFalseNegationRate": 0.014124293785310734,
+      "conditionalFalsePresenceRate": 0.052763819095477386,
+      "confidenceIntervals": {
+        "assertionAwareF1": {
+          "high": 0.32745098039215687,
+          "low": 0.283898916967509
+        },
+        "conceptF1": {
+          "high": 0.3450946643717728,
+          "low": 0.30082552119770534
+        },
+        "falseNegationIncidence": {
+          "high": 0.014168530947054437,
+          "low": 0.003000750187546887
+        },
+        "falsePresenceIncidence": {
+          "high": 0.010064299692479732,
+          "low": 0.0030170049369171695
+        }
+      },
+      "confusion": {
+        "NEGATED->NEGATED": 377,
+        "NEGATED->PRESENT": 21,
+        "PRESENT->NEGATED": 10,
+        "PRESENT->PRESENT": 682,
+        "PRESENT->UNCERTAIN": 16,
+        "UNCERTAIN->NEGATED": 5,
+        "UNCERTAIN->PRESENT": 6,
+        "UNCERTAIN->UNCERTAIN": 11
+      },
+      "dialogues": 213,
+      "exactEvidenceRate": 0.8516769012753898,
+      "falseNegationIncidence": 0.007598784194528876,
+      "falsePresenceIncidence": 0.005950694247662227,
+      "missingEvidenceRate": 0.0,
+      "negatedConceptRecall": 0.1127798243128365,
+      "normalisedEvidenceRate": 0.8729333963155409,
+      "operational": {
+        "calls": 213,
+        "costUsd": 0.0,
+        "failureRate": 0.0,
+        "inputTokens": 565882,
+        "latencyMedianMs": 16087.1,
+        "latencyP95Ms": 53926.7,
+        "outputTokens": 105933,
+        "pricingConfigured": true,
+        "validationFailureRate": 0.0
+      },
+      "predictionConflicts": 0,
+      "presentConceptRecall": 0.5379939209726444,
+      "repeatability": {
+        "assertionAgreement": 1.0,
+        "assertionComparisons": 258,
+        "criticalAssertionChanges": 0,
+        "criticalChangeExamples": [],
+        "dialoguesCompared": 30,
+        "meanConceptJaccard": 0.7274436449436449
+      }
+    },
+    "openai": {
+      "assertionAwareF1": 0.5430305442244553,
+      "assertionAwarePrecision": 0.5307273434461299,
+      "assertionAwareRecall": 0.55591770217967,
+      "conceptF1": 0.5727201257861635,
+      "conceptPrecision": 0.5635273641462,
+      "conceptRecall": 0.5822177822177822,
+      "conditionalAssertionAccuracy": 0.9459272097053726,
+      "conditionalFalseNegationRate": 0.03469640644361834,
+      "conditionalFalsePresenceRate": 0.0102890739833415,
+      "confidenceIntervals": {
+        "assertionAwareF1": {
+          "high": 0.5557337610264634,
+          "low": 0.5293558806764203
+        },
+        "conceptF1": {
+          "high": 0.5839371980676329,
+          "low": 0.5602809207959422
+        },
+        "falseNegationIncidence": {
+          "high": 0.03139356814701378,
+          "low": 0.012698412698412698
+        },
+        "falsePresenceIncidence": {
+          "high": 0.009420076538121873,
+          "low": 0.0032804811372334607
+        }
+      },
+      "confusion": {
+        "NEGATED->CONFLICT": 1,
+        "NEGATED->NEGATED": 1974,
+        "NEGATED->PRESENT": 20,
+        "NEGATED->UNCERTAIN": 46,
+        "PRESENT->NEGATED": 28,
+        "PRESENT->PRESENT": 730,
+        "PRESENT->UNCERTAIN": 49,
+        "UNCERTAIN->NEGATED": 9,
+        "UNCERTAIN->PRESENT": 3,
+        "UNCERTAIN->UNCERTAIN": 25
+      },
+      "dialogues": 213,
+      "exactEvidenceRate": 0.9321870170015456,
+      "falseNegationIncidence": 0.02127659574468085,
+      "falsePresenceIncidence": 0.005950694247662227,
+      "missingEvidenceRate": 0.0,
+      "negatedConceptRecall": 0.5783508075942193,
+      "normalisedEvidenceRate": 0.972952086553323,
+      "operational": {
+        "calls": 213,
+        "costUsd": 0.5723374,
+        "failureRate": 0.0,
+        "inputTokens": 527717,
+        "latencyMedianMs": 15021.8,
+        "latencyP95Ms": 21081.6,
+        "outputTokens": 388995,
+        "pricingConfigured": true,
+        "validationFailureRate": 0.0
+      },
+      "predictionConflicts": 1,
+      "presentConceptRecall": 0.6132218844984803,
+      "repeatability": {
+        "assertionAgreement": 0.9892307692307692,
+        "assertionComparisons": 650,
+        "criticalAssertionChanges": 1,
+        "criticalChangeExamples": [
+          {
+            "concept": "abdominal pain",
+            "dialogueId": "607",
+            "runOne": "NEGATED",
+            "runTwo": "PRESENT"
+          }
+        ],
+        "dialoguesCompared": 30,
+        "meanConceptJaccard": 0.7335635671972629
+      }
+    }
+  }
+}

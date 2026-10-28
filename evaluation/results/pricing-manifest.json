@@ -1,0 +1,115 @@
+{
+  "calculation": "input_tokens / 1,000,000 * input_rate + output_tokens / 1,000,000 * output_rate",
+  "currency": "USD",
+  "prices": {
+    "anthropic": {
+      "inputUsdPerMillionTokens": 1.0,
+      "model": "claude-haiku-4-5-20251001",
+      "outputUsdPerMillionTokens": 5.0,
+      "source": "https://www.anthropic.com/news/claude-haiku-4-5",
+      "sourceCheckedDate": "2026-09-10"
+    },
+    "ollama": {
+      "inputUsdPerMillionTokens": 0.0,
+      "model": "gpt-oss:20b",
+      "note": "No direct API fee; hardware, electricity and setup are excluded.",
+      "outputUsdPerMillionTokens": 0.0,
+      "source": null,
+      "sourceCheckedDate": "2026-09-10"
+    },
+    "openai": {
+      "inputUsdPerMillionTokens": 0.2,
+      "model": "gpt-5.6-luna",
+      "outputUsdPerMillionTokens": 1.2,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "sourceCheckedDate": "2026-09-10"
+    }
+  },
+  "runs": [
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T14:42:32.808722+00:00",
+      "lastCallUtc": "2026-08-31T18:06:37.095443+00:00",
+      "mainCalculatedCostUsd": 0.3745246,
+      "mainCalls": 213,
+      "mainInputTokens": 442091,
+      "mainOutputTokens": 238422,
+      "mainRecordedCostUsd": 0.3745246,
+      "model": "gpt-5.6-luna",
+      "promptVersion": "v1",
+      "provider": "openai",
+      "savedRowsIncludingRepeatability": 243
+    },
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T15:32:57.171487+00:00",
+      "lastCallUtc": "2026-08-31T18:33:47.813431+00:00",
+      "mainCalculatedCostUsd": 1.5562259999999999,
+      "mainCalls": 213,
+      "mainInputTokens": 544651,
+      "mainOutputTokens": 202315,
+      "mainRecordedCostUsd": 1.556226,
+      "model": "claude-haiku-4-5-20251001",
+      "promptVersion": "v1",
+      "provider": "anthropic",
+      "savedRowsIncludingRepeatability": 243
+    },
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T17:21:16.661359+00:00",
+      "lastCallUtc": "2026-08-31T19:44:03.201847+00:00",
+      "mainCalculatedCostUsd": 0.0,
+      "mainCalls": 213,
+      "mainInputTokens": 467959,
+      "mainOutputTokens": 111628,
+      "mainRecordedCostUsd": 0.0,
+      "model": "gpt-oss:20b",
+      "promptVersion": "v1",
+      "provider": "ollama",
+      "savedRowsIncludingRepeatability": 243
+    },
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T21:32:33.723815+00:00",
+      "lastCallUtc": "2026-08-31T22:31:37.616961+00:00",
+      "mainCalculatedCostUsd": 0.5723374,
+      "mainCalls": 213,
+      "mainInputTokens": 527717,
+      "mainOutputTokens": 388995,
+      "mainRecordedCostUsd": 0.5723374,
+      "model": "gpt-5.6-luna",
+      "promptVersion": "v2",
+      "provider": "openai",
+      "savedRowsIncludingRepeatability": 243
+    },
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T22:31:45.093324+00:00",
+      "lastCallUtc": "2026-08-31T22:58:38.008821+00:00",
+      "mainCalculatedCostUsd": 1.6169829999999998,
+      "mainCalls": 213,
+      "mainInputTokens": 640288,
+      "mainOutputTokens": 195339,
+      "mainRecordedCostUsd": 1.616983,
+      "model": "claude-haiku-4-5-20251001",
+      "promptVersion": "v2",
+      "provider": "anthropic",
+      "savedRowsIncludingRepeatability": 243
+    },
+    {
+      "allStoredCostsVerified": true,
+      "firstCallUtc": "2026-08-31T22:59:14.558628+00:00",
+      "lastCallUtc": "2026-09-09T16:46:35.860299+00:00",
+      "mainCalculatedCostUsd": 0.0,
+      "mainCalls": 213,
+      "mainInputTokens": 565882,
+      "mainOutputTokens": 105933,
+      "mainRecordedCostUsd": 0.0,
+      "model": "gpt-oss:20b",
+      "promptVersion": "v2",
+      "provider": "ollama",
+      "savedRowsIncludingRepeatability": 243
+    }
+  ],
+  "scope": "Standard synchronous API pricing; no batch or prompt-cache discount was applied."
+}

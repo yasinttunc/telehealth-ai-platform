@@ -1,0 +1,22 @@
+# Local environment and editor files
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+backup/
+.edit-backup/
+
+# Third-party corpus: fetched locally from MediTOD, never committed.
+# MediTOD publishes no licence for its annotations, so neither the corpus
+# nor anything that copies its labels or dialogue text is redistributed here.
+data/
+/annotations.json
+results/gold.json
+results/reachability-concepts.csv
+results/reachability-alias.csv
+results/reachability-analysis.md
+
+# Model outputs quote transcript text, so they stay local too.
+predictions/

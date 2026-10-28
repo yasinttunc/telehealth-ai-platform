@@ -54,6 +54,27 @@ jobs:
       - name: Run unit tests (live tests stay skipped without credentials)
         run: python -m pytest -q
 
+  evaluation:
+    name: Evaluation harness (pytest)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: evaluation
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: evaluation/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests (corpus tests skip without MediTOD data)
+        run: python -m pytest -q
+
   frontend:
     name: Frontend (lint + build)
     runs-on: ubuntu-latest

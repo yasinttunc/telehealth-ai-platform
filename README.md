@@ -60,6 +60,7 @@ telehealth-ai-platform/
 |-- src/                    Spring Boot application and Java tests
 |-- frontend/               React and TypeScript user interface
 |-- ai-service/             FastAPI extraction service and ASR worker
+|-- evaluation/             Offline LLM extraction evaluation (MSc dissertation)
 |-- infra/postgres/         Database image, schema, seed, and migrations
 |-- scripts/                Local startup helpers
 |-- .env.example            Backend and infrastructure configuration
@@ -69,8 +70,10 @@ telehealth-ai-platform/
 `-- README.md               Setup and architecture guide
 ```
 
-Only the runnable product source, infrastructure, and application tests are
-included. Generated reports and unrelated working files stay outside the repo.
+The repository holds the runnable product source, the infrastructure, the
+application tests, and the offline evaluation harness with its aggregate
+results. Third-party corpora, raw model outputs and unrelated working files
+are kept out of it.
 
 ## Core Workflow
 
@@ -369,10 +372,21 @@ configuration before enabling it.
 
 ### Continuous integration
 
-Every push and pull request runs three GitHub Actions jobs: the Spring Boot test
+Every push and pull request runs four GitHub Actions jobs: the Spring Boot test
 suite against PostgreSQL started from `docker-compose.yml` (schema and seed data
-from `infra/postgres/init`), the AI service unit tests, and the frontend lint and
-production build.
+from `infra/postgres/init`), the AI service unit tests, the evaluation harness
+unit tests, and the frontend lint and production build.
+
+## Extraction Evaluation
+
+[`evaluation/`](evaluation/README.md) compares OpenAI, Anthropic and a local
+Ollama model on structured symptom extraction over 213 simulated consultations
+from MediTOD (5,005 gold findings). Under the frozen primary prompt, both
+commercial providers reach a concept F1 of about 0.49 and the local model
+about 0.30. A post-hoc prompt revision raised the commercial providers to
+0.57–0.60, but most of that gain depends on the alias normalisation layer. Both
+prompts, the method and the full results are in the evaluation README. The
+corpus itself is not redistributed.
 
 ## Design Decisions
 

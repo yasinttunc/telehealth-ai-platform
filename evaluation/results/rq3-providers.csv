@@ -1,0 +1,4 @@
+provider,calls,costUsd,failureRate,inputTokens,latencyMedianMs,latencyP95Ms,outputTokens,pricingConfigured,validationFailureRate
+openai,213,0.3745246,0.0,442091,9271.3,13321.3,238422,True,0.0
+anthropic,213,1.556226,0.0,544651,6576.2,10109.3,202315,True,0.0
+ollama,213,0.0,0.004694835680751174,467959,14612.45,33542.7,111628,True,0.004694835680751174

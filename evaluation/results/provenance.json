@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/dair-iitd/MediTOD",
+  "commit": "0b7a87c3553c9056bc8371b0809811003f94b261",
+  "rawRecords": 231,
+  "uniqueDialogues": 213,
+  "duplicatePairs": 18,
+  "goldFindings": 5005,
+  "assertionConflicts": 96,
+  "assertionCounts": {
+    "NEGATED": 3529,
+    "PRESENT": 1316,
+    "UNCERTAIN": 64
+  }
+}
